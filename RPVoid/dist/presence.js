@@ -20,6 +20,9 @@ presence.on('UpdateData', async () => {
     else if (document.location.pathname == '/login') {
         presenceData.details = 'Logging in';
     }
+    else if (document.location.pathname == '/register') {
+        presenceData.details = 'Creating an account';
+    }
     else if (document.location.pathname == '/') {
         presenceData.details = 'On the homepage';
     }
