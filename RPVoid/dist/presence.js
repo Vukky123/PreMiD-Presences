@@ -14,7 +14,7 @@ presence.on('UpdateData', async () => {
         startTimestamp: browsingStamp,
     };
     if (document.location.pathname == '/game') {
-        presenceData.details = 'In-game.';
+        presenceData.details = 'In-game';
         presenceData.state = `Map: ${map.id}\nFish: ${fish}\nSkellies: ${skellies}`;
     }
     else if (document.location.pathname == '/login') {
