@@ -54,7 +54,7 @@ async function updateInventory() {
         'method': 'GET',
     });
     const bag = await r.json();
-    fish = getItemAmount(bag, 2);
+    fish = getItemAmount(bag, 2) + getItemAmount(bag, 3);
     skellies = getItemAmount(bag, 26);
 }
 
