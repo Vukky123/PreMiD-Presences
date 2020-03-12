@@ -1,0 +1,25 @@
+{
+  "author": {
+    "name": "Vuk",
+    "id": "282866197727543297"
+  },
+  "contributors": [
+    {
+      "name": "Nabbith",
+      "id": "142840396370804736"
+    }
+  ],
+  "url": "rpvoid.com",
+  "description": {
+    "en": "Tactics online roleplaying game"
+  },
+  "service": "RPVoid",
+  "version": "1.0.0",
+  "logo": "https://i.imgur.com/rmncDqM.png",
+  "thumbnail": "https://i.imgur.com/rmncDqM.png",
+  "color": "#FFFF00",
+  "tags": [
+    "roleplay"
+  ],
+  "category": "games"
+}
