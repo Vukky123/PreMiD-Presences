@@ -35,6 +35,8 @@ presence.on('UpdateData', async () => {
         presenceData.details = 'Creating an Avi';
     } else if (document.location.pathname == '/dev/suicide') {
         presenceData.details = 'Killing an Avi';
+    } else {
+        presenceData.details = 'Doing scary things';
     }
     presence.setActivity(presenceData);
 });
