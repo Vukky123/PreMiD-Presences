@@ -25,7 +25,7 @@
   "settings": [
     {
       "id": "dataTimer",
-      "title": "Get data how often (in seconds)",
+      "title": "Refresh data how often? (seconds)",
       "icon": "fas fa-clock",
       "value": "120",
       "placeholder": "120"
