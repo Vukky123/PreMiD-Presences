@@ -1,5 +1,5 @@
 const presence = new Presence({
-    clientId: '687312335895134245',
+    clientId: '737248355918544908',
     mediaKeys: false,
 });
 const browsingStamp = Math.floor(Date.now() / 1000);
@@ -16,15 +16,14 @@ presence.on('UpdateData', async () => {
     if (document.location.pathname == '/game') {
         presenceData.details = `In-game - Map ${map.id}`;
         presenceData.state = `${fish} fish, ${skellies} skellies`;
-    }
-    else if (document.location.pathname == '/login') {
+    } else if (document.location.pathname == '/login') {
         presenceData.details = 'Logging in';
-    }
-    else if (document.location.pathname == '/register') {
+    } else if (document.location.pathname == '/register') {
         presenceData.details = 'Creating an account';
-    }
-    else if (document.location.pathname == '/') {
+    } else if (document.location.pathname == '/') {
         presenceData.details = 'On the homepage';
+    } else if (document.location.pathname == '/start') {
+        presenceData.details = 'Creating an Avi';
     }
     presence.setActivity(presenceData);
 });
