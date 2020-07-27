@@ -16,7 +16,7 @@
   "service": "RPVoid",
   "version": "1.0.0",
   "logo": "https://i.imgur.com/rmncDqM.png",
-  "thumbnail": "https://i.imgur.com/rmncDqM.png",
+  "thumbnail": "https://rpvoid.com/img/600x200_enter.jpg",
   "color": "#FFFF00",
   "tags": [
     "roleplay"
@@ -44,6 +44,12 @@
       "title": "Show Map ID for structures?",
       "icon": "fas fa-user-lock",
       "value": false
+    },
+    { 
+      "id": "seasons",
+      "title": "Show seasons?",
+      "icon": "fas fa-seedling",
+      "value": true
     }
   ]
 }
