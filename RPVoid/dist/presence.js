@@ -33,6 +33,8 @@ presence.on('UpdateData', async () => {
         presenceData.details = 'On the homepage';
     } else if (document.location.pathname == '/start') {
         presenceData.details = 'Creating an Avi';
+    } else if (document.location.pathname == '/dev/suicide') {
+        presenceData.details = 'Killing an Avi';
     }
     presence.setActivity(presenceData);
 });
