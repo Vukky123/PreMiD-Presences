@@ -24,11 +24,26 @@
   "category": "games",
   "settings": [
     {
-        "id": "dataTimer",
-        "title": "Get data how often (in seconds)",
-        "icon": "fas fa-clock",
-        "value": "120",
-        "placeholder": "120"
+      "id": "dataTimer",
+      "title": "Get data how often (in seconds)",
+      "icon": "fas fa-clock",
+      "value": "120",
+      "placeholder": "120"
+    },
+    { 
+      "id": "mapID",
+      "title": "Show Map ID?",
+      "icon": "fas fa-user-lock",
+      "value": true
+    },
+    { 
+      "id": "mapIDStruct",
+      "if": {
+        "mapID": true
+      },
+      "title": "Show Map ID for structures?",
+      "icon": "fas fa-user-lock",
+      "value": false
     }
   ]
 }

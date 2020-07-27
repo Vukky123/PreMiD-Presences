@@ -15,10 +15,14 @@ presence.on('UpdateData', async () => {
         startTimestamp: browsingStamp,
     };
     if (document.location.pathname == '/game') {
-        if(map.is_dreamland == "0") {
+        if(map.is_dreamland == "1") {
+            presenceData.details = `In-game - Sleeping`;
+        } else if (map.is_structure == "1" && await presence.getSetting("mapIDStruct") == false) {
+            presenceData.details = `In-game - In structure`;
+        } else if (await presence.getSetting("mapID") == true) {
             presenceData.details = `In-game - Map ${map.id}`;
         } else {
-            presenceData.details = `In-game - Sleeping`;
+            presenceData.details = `In-game`
         }
         presenceData.state = `Health ${modifiers.health}`;
     } else if (document.location.pathname == '/login') {
@@ -78,7 +82,7 @@ async function updateInventory() {
 }
 
 async function updateData() {
-    let timer = presence.metadata.settings[0].value;
+    let timer = await presence.getSetting("dataTimer");
     updateMap();
     updateInventory();
     updateModifiers();
@@ -87,7 +91,7 @@ async function updateData() {
         updateMap();
         updateInventory();
         updateModifiers();
-    }, timer * 1000);
+    }, parseInt(timer) * 1000);
 }
 
 if (document.location.pathname == '/game') {
