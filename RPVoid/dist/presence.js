@@ -15,6 +15,8 @@ presence.on('UpdateData', async () => {
         startTimestamp: browsingStamp,
     };
     if (document.location.pathname == '/game') {
+        presenceData.smallImageKey = map.season;
+        presenceData.smallImageText = `season: ${map.season} - font awesome free icon`;
         if(map.is_dreamland == "1") {
             presenceData.details = `In-game - Sleeping`;
         } else if (map.is_structure == "1" && await presence.getSetting("mapIDStruct") == false) {
