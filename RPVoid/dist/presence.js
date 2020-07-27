@@ -90,12 +90,12 @@ async function updateInventory() {
 async function updateData() {
     let timer = await presence.getSetting("dataTimer");
     updateMap();
-    updateInventory();
+    // updateInventory();
     updateModifiers();
   
     setInterval(() => {
         updateMap();
-        updateInventory();
+        // updateInventory();
         updateModifiers();
     }, parseInt(timer) * 1000);
 }

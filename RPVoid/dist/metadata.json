@@ -27,8 +27,8 @@
       "id": "dataTimer",
       "title": "Refresh data how often? (seconds)",
       "icon": "fas fa-clock",
-      "value": "120",
-      "placeholder": "120"
+      "value": "60",
+      "placeholder": "60"
     },
     { 
       "id": "mapID",
