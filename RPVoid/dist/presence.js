@@ -7,6 +7,7 @@ const browsingStamp = Math.floor(Date.now() / 1000);
 let map = { id : 0 };
 let fish = 0;
 let skellies = 0;
+let modifiers = { health : 0};
 
 presence.on('UpdateData', async () => {
     const presenceData = {
@@ -15,7 +16,7 @@ presence.on('UpdateData', async () => {
     };
     if (document.location.pathname == '/game') {
         presenceData.details = `In-game - Map ${map.id}`;
-        presenceData.state = `${fish} fish, ${skellies} skellies`;
+        presenceData.state = `Health ${modifiers.health}`;
     } else if (document.location.pathname == '/login') {
         presenceData.details = 'Logging in';
     } else if (document.location.pathname == '/register') {
@@ -41,6 +42,21 @@ async function updateMap() {
     });
     map = await r.json();
 }
+
+async function updateModifiers() {
+    const r = await fetch('https://rpvoid.com/modifiers', {
+        'credentials': 'include',
+        'headers': {
+            'accept': 'application/json, text/plain, */*',
+            'content-type': 'application/json;charset=UTF-8',
+            'x-xsrf-token': decodeURIComponent(document.cookie).replace('XSRF-TOKEN=', ''),
+        },
+        'body': null,
+        'method': 'GET',
+    });
+    modifiers = await r.json();
+}
+
 async function updateInventory() {
     const r = await fetch('https://rpvoid.com/inventory?type=materials', {
         'credentials': 'include',
@@ -60,11 +76,13 @@ async function updateInventory() {
 if (document.location.pathname == '/game') {
   updateMap();
   updateInventory();
+  updateModifiers();
 
   // update every 120 seconds
   setInterval(() => {
       updateMap();
       updateInventory();
+      updateModifiers();
   }, 120 * 1000);
 }
 
