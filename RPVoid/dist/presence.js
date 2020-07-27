@@ -15,7 +15,11 @@ presence.on('UpdateData', async () => {
         startTimestamp: browsingStamp,
     };
     if (document.location.pathname == '/game') {
-        presenceData.details = `In-game - Map ${map.id}`;
+        if(map.is_dreamland == "0") {
+            presenceData.details = `In-game - Map ${map.id}`;
+        } else {
+            presenceData.details = `In-game - Sleeping`;
+        }
         presenceData.state = `Health ${modifiers.health}`;
     } else if (document.location.pathname == '/login') {
         presenceData.details = 'Logging in';
@@ -73,17 +77,21 @@ async function updateInventory() {
     skellies = getItemAmount(bag, 26);
 }
 
-if (document.location.pathname == '/game') {
-  updateMap();
-  updateInventory();
-  updateModifiers();
+async function updateData() {
+    let timer = presence.metadata.settings[0].value;
+    updateMap();
+    updateInventory();
+    updateModifiers();
+  
+    setInterval(() => {
+        updateMap();
+        updateInventory();
+        updateModifiers();
+    }, timer * 1000);
+}
 
-  // update every 120 seconds
-  setInterval(() => {
-      updateMap();
-      updateInventory();
-      updateModifiers();
-  }, 120 * 1000);
+if (document.location.pathname == '/game') {
+  updateData();
 }
 
 function getItemAmount(bag, id) {

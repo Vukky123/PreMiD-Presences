@@ -21,5 +21,14 @@
   "tags": [
     "roleplay"
   ],
-  "category": "games"
+  "category": "games",
+  "settings": [
+    {
+        "id": "dataTimer",
+        "title": "Get data how often (in seconds)",
+        "icon": "fas fa-clock",
+        "value": "120",
+        "placeholder": "120"
+    }
+  ]
 }
