@@ -24,7 +24,7 @@ presence.on('UpdateData', async () => {
         } else if (map.is_structure == "1" && await presence.getSetting("mapIDStruct") == false) {
             presenceData.details = `In-game - In structure`;
         } else if (await presence.getSetting("mapID") == true) {
-            presenceData.details = `In-game - Map ${map.id}`;
+            presenceData.details = `In-game - Map ID: ${map.id}`;
         } else {
             presenceData.details = `In-game`
         }
@@ -37,7 +37,7 @@ presence.on('UpdateData', async () => {
           if(modifiers[modifierSetting] == undefined) {
             presenceData.state = `Invalid modifier.`;
           } else {
-            presenceData.state = `${modifierSettingName} ${modifiers[modifierSetting]}`;
+            presenceData.state = `${modifierSettingName}: ${modifiers[modifierSetting]}`;
           }
         }
     } else if (document.location.pathname == '/login') {
