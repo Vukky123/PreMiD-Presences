@@ -30,13 +30,13 @@
       "value": "60",
       "placeholder": "60"
     },
-    { 
+    {
       "id": "mapID",
       "title": "Show Map ID?",
       "icon": "fas fa-user-lock",
       "value": true
     },
-    { 
+    {
       "id": "mapIDStruct",
       "if": {
         "mapID": true
@@ -45,11 +45,27 @@
       "icon": "fas fa-user-lock",
       "value": false
     },
-    { 
+    {
       "id": "seasons",
       "title": "Show seasons?",
       "icon": "fas fa-seedling",
       "value": true
+    },
+    {
+      "id": "modifier",
+      "title": "Show modifiers?",
+      "icon": "fas fa-chart-bar",
+      "value": true
+    },
+    {
+    "if": {
+      "modifier": true
+    },
+    "id": "modifierName",
+    "title": "Display what modifier?",
+    "icon": "fas fa-heart",
+    "value": "health",
+    "placeholder": "https://rpvoid.com/modifiers"
     }
   ]
 }

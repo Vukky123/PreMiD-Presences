@@ -28,7 +28,18 @@ presence.on('UpdateData', async () => {
         } else {
             presenceData.details = `In-game`
         }
-        presenceData.state = `Health ${modifiers.health}`;
+        if(await presence.getSetting("modifier") == true) {
+          var modifierSetting = await presence.getSetting("modifierName")
+          modifierSettingName = modifierSetting.replace(/_/g , " ");
+          modifierSettingName = modifierSettingName.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+              return letter.toUpperCase();
+          });
+          if(modifiers[modifierSetting] == undefined) {
+            presenceData.state = `Invalid modifier.`;
+          } else {
+            presenceData.state = `${modifierSettingName} ${modifiers[modifierSetting]}`;
+          }
+        }
     } else if (document.location.pathname == '/login') {
         presenceData.details = 'Logging in';
     } else if (document.location.pathname == '/register') {
@@ -94,7 +105,7 @@ async function updateData() {
     updateMap();
     // updateInventory();
     updateModifiers();
-  
+
     setInterval(() => {
         updateMap();
         // updateInventory();
