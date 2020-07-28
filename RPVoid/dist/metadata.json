@@ -58,14 +58,14 @@
       "value": true
     },
     {
-    "if": {
-      "modifier": true
-    },
-    "id": "modifierName",
-    "title": "Display what modifier?",
-    "icon": "fas fa-heart",
-    "value": "health",
-    "placeholder": "https://rpvoid.com/modifiers"
+      "if": {
+        "modifier": true
+      },
+      "id": "modifierName",
+      "title": "Display what modifier?",
+      "icon": "fas fa-heart",
+      "value": "health",
+      "placeholder": "https://rpvoid.com/modifiers"
     }
   ]
 }
