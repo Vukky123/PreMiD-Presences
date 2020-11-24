@@ -1,0 +1,19 @@
+{
+  "author": {
+    "name": "Vukky",
+    "id": "708333380525228082"
+  },
+  "url": ["salad.io", "getsalad.io", "app.salad.io"],
+  "description": {
+    "en": "AFK the Smart Way!"
+  },
+  "service": "Salad.io",
+  "version": "1.0.0",
+  "logo": "https://i.imgur.com/qkhmPw2.png",
+  "thumbnail": "https://i.imgur.com/51qf45I.png",
+  "color": "#B0D932",
+  "tags": [
+    "crypto"
+  ],
+  "category": "other"
+}
