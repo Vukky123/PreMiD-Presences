@@ -9,7 +9,7 @@ presence.on('UpdateData', async () => {
         largeImageKey: 'salad',
         startTimestamp: browsingStamp,
     };
-    if (document.location.hostname == "salad.io") {
+    if (document.location.hostname == "www.salad.io") {
         if (document.location.pathname == '/download') {
             presenceData.details = 'Downloading Salad'
         } 
