@@ -1,2 +1,6 @@
 # PreMiD-Presences
- presences for premid
+Presences for PreMiD
+
+## Available presences
+* RPVoid (unofficial)
+* Salad.io (unofficial)
