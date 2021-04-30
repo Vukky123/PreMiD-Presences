@@ -1,0 +1,27 @@
+{
+    "author": {
+      "name": "Vukky",
+      "id": "708333380525228082"
+    },
+    "url": ["127.0.0.1"],
+    "description": {
+      "en": "Archive Team is a loose collective of rogue archivists, programmers, writers and loudmouths dedicated to saving our digital heritage."
+    },
+    "service": "ArchiveTeam Warrior",
+    "version": "1.0.0",
+    "logo": "https://i.imgur.com/T4bQwD5.png",
+    "thumbnail": "https://i.imgur.com/T4bQwD5.png",
+    "color": "#A84E21",
+    "tags": [
+      "archive"
+    ],
+    "category": "other",
+    "settings": [
+        {
+          "id": "hideLeaderboard",
+          "title": "Hide leaderboard",
+          "icon": "fas fa-clipboard-list",
+          "value": false
+        }
+    ]
+}  
